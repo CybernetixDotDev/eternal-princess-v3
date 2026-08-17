@@ -66,26 +66,25 @@ export function Navigation() {
           <span />
         </button>
       </nav>
-      <div
-        id="mobile-navigation"
-        className={`mobile-nav md:hidden ${isOpen ? "open" : ""}`}
-      >
-        <div className="mx-5 mb-5 rounded-[8px] border border-white/12 bg-[rgba(37,13,46,0.88)] p-6 shadow-[0_30px_90px_rgba(0,0,0,0.35)] backdrop-blur-2xl">
-          {navItems.map((item) => (
-            <a
-              key={item.href}
-              href={item.href}
-              onClick={closeMenu}
-              className="mobile-nav-link"
-            >
-              {item.label}
+      {isOpen ? (
+        <div id="mobile-navigation" className="mobile-nav open md:hidden">
+          <div className="mx-5 mb-5 rounded-[8px] border border-white/12 bg-[rgba(37,13,46,0.88)] p-6 shadow-[0_30px_90px_rgba(0,0,0,0.35)] backdrop-blur-2xl">
+            {navItems.map((item) => (
+              <a
+                key={item.href}
+                href={item.href}
+                onClick={closeMenu}
+                className="mobile-nav-link"
+              >
+                {item.label}
+              </a>
+            ))}
+            <a href="/garden" onClick={closeMenu} className="mobile-enter">
+              Enter
             </a>
-          ))}
-          <a href="/garden" onClick={closeMenu} className="mobile-enter">
-            Enter
-          </a>
+          </div>
         </div>
-      </div>
+      ) : null}
     </header>
   );
 }

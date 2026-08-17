@@ -319,6 +319,7 @@ input:focus-visible {
 }
 
 .mobile-nav.open {
+  display: grid;
   grid-template-rows: 1fr;
 }
 
@@ -984,10 +985,6 @@ input:focus-visible {
 }
 
 @media (max-width: 767px) {
-  .mobile-nav {
-    display: grid;
-  }
-
   .garden-margin-note {
     display: none;
   }
