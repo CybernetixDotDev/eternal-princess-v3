@@ -9,5 +9,4 @@ export const socialLinks = [
   { label: "Instagram", href: socialUrls.instagram },
   { label: "LinkedIn", href: socialUrls.linkedin },
   { label: "Facebook", href: socialUrls.facebook },
-  { label: "OnlyFans", href: socialUrls.onlyFans },
 ];
